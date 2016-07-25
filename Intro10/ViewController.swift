@@ -21,9 +21,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        myName.delegate = self
-        
-        myStatus.text = "Total = " + String(nameList.count)
+        myName.delegate = self        
         
     }
 
@@ -32,6 +30,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        
+        myStatus.text = "Total = " + String(nameList.count)
+        
+    }
+        
+        
     // MARK: UITextFieldDelegate
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         
