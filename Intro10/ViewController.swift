@@ -30,7 +30,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         
         myStatus.text = "Total = " + String(nameList.count)
         
@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         
     // MARK: UITextFieldDelegate
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         textField.resignFirstResponder()
         
@@ -46,7 +46,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     // MARK: Action
-    @IBAction func addName(sender: UIButton) {
+    @IBAction func addName(_ sender: UIButton) {
         
         myName.resignFirstResponder()
         
@@ -64,7 +64,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     }
     
-    @IBAction func displayLastName(sender: UIButton) {
+    @IBAction func displayLastName(_ sender: UIButton) {
         
         myName.resignFirstResponder()
         
